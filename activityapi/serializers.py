@@ -5,7 +5,7 @@ class TimezoneSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Timezone
-        fields = ('url', 'id', 'tz')
+        fields = ('url', 'tz')
 
 class ActivitySerializer(serializers.HyperlinkedModelSerializer):
 
@@ -13,7 +13,7 @@ class ActivitySerializer(serializers.HyperlinkedModelSerializer):
     end_time = serializers.DateTimeField(format="%b %d %Y %I:%M%p")
     class Meta:
         model = Activity
-        fields = ('url', 'id', 'start_time', 'end_time')
+        fields = ('url', 'start_time', 'end_time')
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
 
